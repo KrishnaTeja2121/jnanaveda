@@ -28,6 +28,8 @@ JnanaVeda is a static web app that presents sacred stotra content in a structure
 
 ## Illustrations
 
+Latest screenshots of the current UI:
+
 ### Desktop View
 
 ![JnanaVeda Desktop UI](assets/jnanaveda-desktop.png)
