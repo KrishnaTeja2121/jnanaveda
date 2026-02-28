@@ -4571,6 +4571,176 @@ const metaEl = document.getElementById("content-meta");
 const verseList = document.getElementById("verse-list");
 const verseTemplate = document.getElementById("verse-template");
 
+function pickLexemes(text, lexicon, maxItems = 3) {
+  const hits = [];
+  Object.entries(lexicon).forEach(([needle, gloss]) => {
+    if (text.includes(needle)) hits.push(gloss);
+  });
+  return [...new Set(hits)].slice(0, maxItems);
+}
+
+function namakamTranslation(line) {
+  const lexicon = {
+    "రుద్ర": "Rudra",
+    "శివ": "auspicious grace",
+    "ధన్వ": "the divine bow",
+    "ఇష": "arrows",
+    "భేషజ": "healing power",
+    "సహస్ర": "countless forms",
+    "నీల": "blue-throated Lord",
+    "పశు": "all beings",
+    "క్షేత్ర": "the fields of life",
+    "మృత్యు": "release from death",
+    "త్ర్యంబక": "the three-eyed Lord"
+  };
+  const aspects = pickLexemes(line, lexicon);
+
+  if (line.includes("నమో") || line.includes("నమః") || line.includes("నమస్తే")) {
+    if (aspects.length) return `Salutations to ${aspects.join(", ")}.`;
+    return "Salutations to Rudra in this revealed form.";
+  }
+  if (line.includes("మా నో") || line.includes("మా నః")) {
+    return "May no harm come to us, our families, our life-force, and all living beings.";
+  }
+  if (line.includes("మృడ") || line.includes("శంత")) {
+    return "Be gracious to us and establish peace, wellbeing, and inner clarity.";
+  }
+  if (line.includes("భేషజ")) {
+    return "Bestow healing and remove affliction from body, mind, and community.";
+  }
+  if (line.includes("త్ర్యంబకం")) {
+    return "We worship the three-eyed Lord; free us from bondage and lead us to immortality.";
+  }
+  return "This line invokes Rudra for protection, purification, and compassionate guidance.";
+}
+
+function namakamMeaning(line, anuvaka) {
+  const themes = {
+    1: "Anuvaka 1 pacifies Rudra and invokes His auspicious, non-harming form.",
+    2: "Anuvaka 2 salutes Rudra as the Lord of directions, life, and natural order.",
+    3: "Anuvaka 3 recognizes Rudra in all human movements and social conditions.",
+    4: "Anuvaka 4 venerates the Divine in organized life, labor, and protection systems.",
+    5: "Anuvaka 5 praises countless names and dimensions of the same Supreme reality.",
+    6: "Anuvaka 6 worships Rudra through place, time, pathways, and daily existence.",
+    7: "Anuvaka 7 invokes Rudra as force, defense, weather, and protective presence.",
+    8: "Anuvaka 8 reveals the fierce and auspicious forms as one divine continuum.",
+    9: "Anuvaka 9 is a prayer for safety, health, and freedom from suffering.",
+    10: "Anuvaka 10 deeply petitions for healing, family welfare, and divine grace.",
+    11: "Anuvaka 11 offers universal surrender to Rudra pervading all worlds."
+  };
+  if (line.includes("మా నో") || line.includes("మా నః")) return "A direct non-harm prayer protecting elders, children, cattle, and lineage.";
+  if (line.includes("భేషజ")) return "Rudra is invoked as the cosmic healer who removes disease and negativity.";
+  if (line.includes("సహస్ర")) return "The verse acknowledges the Lord's countless forms across all directions.";
+  return themes[anuvaka] || "This line contributes to the Namakam arc of surrender and sanctification.";
+}
+
+function chamakamTranslation(line) {
+  const blessings = {
+    "ప్రాణ": "vital breath",
+    "అపాన": "life-energy balance",
+    "వ్యాన": "circulating vitality",
+    "వాక్చ": "clarity in speech",
+    "మన": "stability of mind",
+    "చక్షు": "clear vision",
+    "శ్రోత్ర": "attentive hearing",
+    "బలం": "strength",
+    "ఓజ": "vigor",
+    "ఆయు": "long life",
+    "శర్మ": "peace",
+    "వర్మ": "protection",
+    "సత్య": "truthfulness",
+    "శ్రద్ధా": "faith",
+    "ధనం": "wealth",
+    "క్షేమ": "security",
+    "అన్నం": "food",
+    "కృషి": "agriculture",
+    "వృష్టి": "timely rain",
+    "పశవ": "livelihood and herds",
+    "యజ్ఞ": "sacrificial alignment"
+  };
+  const list = pickLexemes(line, blessings);
+
+  if (line.includes("యజ్ఞేన కల్ప")) return "May all these become consecrated, complete, and fit through yajna.";
+  if (line.includes("శాంతిః")) return "May peace prevail in all planes of existence.";
+  if (line.includes("చ మే") || line.includes("మేఽ")) {
+    if (list.length) return `May ${list.join(", ")} be granted to me in fullness.`;
+    return "May this blessing also be granted to me.";
+  }
+  return "This line extends the Chamakam prayer for complete inner and outer fulfillment.";
+}
+
+function chamakamMeaning(line, anuvaka) {
+  const themes = {
+    1: "Anuvaka 1 asks for total personal capacities: body, senses, mind, and vitality.",
+    2: "Anuvaka 2 seeks excellence, dignity, growth, and right discernment.",
+    3: "Anuvaka 3 invokes peace, joy, safety, and wholesome living.",
+    4: "Anuvaka 4 prays for food chains, cultivation, and nourishment.",
+    5: "Anuvaka 5 requests resources, power to act, and stable prosperity.",
+    6: "Anuvaka 6 aligns life with deities and cosmic supporting forces.",
+    7: "Anuvaka 7 sanctifies ritual streams and sacred offering frameworks.",
+    8: "Anuvaka 8 completes sacrificial instruments, spaces, and procedures.",
+    9: "Anuvaka 9 consecrates time, vow, mantra, and liturgical rhythm.",
+    10: "Anuvaka 10 dedicates breath, body, senses, and self to sacred purpose.",
+    11: "Anuvaka 11 culminates in fullness, measure, abundance, and integration."
+  };
+  if (line.includes("యజ్ఞేన కల్ప")) return "A consecration line: all requested blessings are offered into sacred order.";
+  return themes[anuvaka] || "This line is part of Chamakam's progressive invocation of total wellbeing.";
+}
+
+function lalitaTranslation(line, number) {
+  const epithets = {
+    "మాతా": "Divine Mother",
+    "మహారాజ్ఞీ": "Great Empress",
+    "సింహాసనేశ్వరీ": "Throne-seated Sovereign",
+    "చిదగ్ని": "born of consciousness-fire",
+    "పాశ": "holder of the noose of love",
+    "అంకుశ": "wielder of the goad of discipline",
+    "కామేశ": "beloved of Kameshwara",
+    "జ్ఞాన": "embodiment of wisdom",
+    "భక్త": "protector of devotees",
+    "శివ": "one with Shiva",
+    "త్రిపుర": "sovereign of the three worlds",
+    "మోక్ష": "bestower of liberation"
+  };
+  const facets = pickLexemes(line, epithets);
+  if (number === 1) return "She is praised as the Divine Mother, Supreme Queen, and consciousness-born source of divine action.";
+  if (number === 2) return "She shines like a thousand suns, holding the powers that attract, guide, and transform.";
+  if (number === 3) return "Her mind-bow and subtle arrows symbolize mastery over creation, perception, and inner evolution.";
+  if (facets.length) return `This verse praises Lalita as ${facets.join(", ")}.`;
+  return "This verse glorifies Sri Lalita through sacred names that reveal her beauty, power, and grace.";
+}
+
+function lalitaMeaning(line, number) {
+  if (line.includes("జ్ఞాన")) return "Emphasizes wisdom-consciousness: the Goddess as both knowledge and the knower.";
+  if (line.includes("భక్త")) return "Highlights her compassionate relationship with devotees and spiritual refuge.";
+  if (line.includes("శివ")) return "Reveals non-duality: Lalita and Shiva are experienced as one reality.";
+  if (number <= 30) return "Early verses contemplate divine form, weapons, radiance, and sovereign beauty.";
+  if (number <= 75) return "These verses expand into cosmic rulership, mantra-shakti, and sacred order.";
+  if (number <= 120) return "Middle verses reveal yogic, subtle-body, and consciousness-oriented theology.";
+  if (number <= 160) return "Later verses emphasize protection, grace, and universal governance.";
+  return "Closing verses culminate in liberation, non-dual awareness, and fulfillment of spiritual purpose.";
+}
+
+function applyLineWiseInterpretations() {
+  stotrams.forEach((stotram) => {
+    stotram.verses.forEach((verse) => {
+      const line = verse.sanskrit || "";
+      if (verse.section === "Namakam") {
+        verse.translation = namakamTranslation(line);
+        verse.meaning = namakamMeaning(line, verse.number);
+      } else if (verse.section === "Chamakam") {
+        verse.translation = chamakamTranslation(line);
+        verse.meaning = chamakamMeaning(line, verse.number);
+      } else if (verse.section === "Lalita Sahasranamam") {
+        verse.translation = lalitaTranslation(line, verse.number);
+        verse.meaning = lalitaMeaning(line, verse.number);
+      }
+    });
+  });
+}
+
+applyLineWiseInterpretations();
+
 function renderNav(activeId) {
   nav.innerHTML = "";
   stotrams.forEach((stotram) => {
