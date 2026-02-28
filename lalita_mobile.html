@@ -1,0 +1,764 @@
+﻿ï»¿<!DOCTYPE html>
+<html> 
+ 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sree Lalita Sahasra Nama Stotram - English (IAST) | Vaidika Vignanam</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+
+	<!-- Vedic Fonts-->
+	<style type="text/css" id="custom-css">
+		@import url('https://fonts.googleapis.com/css2?family=Mandali&family=Tenali+Ramakrishna&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+
+		@font-face {
+			font-family: 'Pothana2000';
+			src: url("https://vignanam.org/fonts/Pothana/Pothana2000_1_2_1.eot");
+			src: url("https://vignanam.org/fonts/Pothana/Pothana2000_1_2_1.eot?#iefix") format("embedded-opentype"), 
+				 url("https://vignanam.org/fonts/Pothana/Pothana2000_1_2_1.woff") format("woff"),
+				 url("https://vignanam.org/fonts/Pothana/Pothana2000_1_2_1.ttf") format("truetype");
+			font-weight: normal;
+			font-style: normal;                
+		}
+
+		@font-face {
+			font-family: 'Goda';
+			src: url("https://vignanam.org/fonts/Goda/Goda.eot");
+			src: url("https://vignanam.org/fonts/Goda/Goda.eot?#iefix") format("embedded-opentype"),
+					url("https://vignanam.org/fonts/Goda/Goda.woff") format("woff"),
+					url("https://vignanam.org/fonts/Goda/Goda.ttf") format("truetype");
+			font-weight: normal;
+			font-style: normal;                
+		}
+
+		@font-face {
+			font-family: 'Siddhanta';
+			src: url("https://vignanam.org/fonts/Siddhanta/Siddhanta.eot");
+			src: url("https://vignanam.org/fonts/Siddhanta/Siddhanta.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/Siddhanta/Siddhanta.woff") format("woff"),
+				 url("https://vignanam.org/fonts/Siddhanta/Siddhanta.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansTamil';
+			src: url("https://vignanam.org/fonts/NotoSansTamil-Regular/NotoSansTamil-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSansTamil-Regular/NotoSansTamil-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSansTamil-Regular/NotoSansTamil-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSansTamil-Regular/NotoSansTamil-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansTelugu';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansTelugu-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansTelugu-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansTelugu-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansTelugu-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansKannada';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansKannada-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansKannada-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansKannada-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansKannada-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansMalayalam';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansMalayalam-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansMalayalam-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansMalayalam-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansMalayalam-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansGujarati';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansGujarati-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansGujarati-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansGujarati-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansGujarati-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansBengali';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansBengali-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansBengali-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansBengali-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansBengali-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansOriya';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansOriya-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansOriya-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansOriya-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansOriya-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansSinhala';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansSinhala-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansSinhala-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansSinhala-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansSinhala-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansGurmukhi';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansGurmukhi-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansGurmukhi-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansGurmukhi-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansGurmukhi-Regular.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'NotoSansGrantha';
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansGrantha-Regular.eot");
+			src: url("https://vignanam.org/fonts/NotoSans/NotoSansGrantha-Regular.eot?#iefix") format("embedded-opentype"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansGrantha-Regular.woff") format("woff"),
+				 url("https://vignanam.org/fonts/NotoSans/NotoSansGrantha-Regular.ttf") format("truetype");
+		}
+
+	</style>
+
+	<script type="text/javascript" src="js/vignanam-mobile.js"></script>
+	<link rel="stylesheet" href="css/vignanam-mobile.css" />
+	
+</head> 
+ 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TMESQ8MKLP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TMESQ8MKLP');
+</script>
+
+
+
+<body> 
+ 
+<div data-role="page" id="vignanamcontent">
+ 
+    <div data-role="header" data-position="fixed">
+		<center>
+			<img src="../../images/logo/mobile_header_logo/VVHeader-english.jpg" alt="Vaidika Vignanam" width="400" />
+		</center>
+        <a data-role="button" data-direction="reverse" data-rel="back" href="#english" data-icon="arrow-l" data-iconpos="left">
+            Back
+        </a>
+
+		<center>
+		<ul data-role="controlgroup" data-type="horizontal">
+			<li class="decreaseFont" data-role="button" data-icon="minus" data-iconpos="notext"></li>
+			<li class="resetFont" data-role="button" data-icon="refresh" data-iconpos="notext"></li>
+			<li class="increaseFont" data-role="button" data-icon="plus" data-iconpos="notext"></li> 
+		</ul>
+		</center>
+    </div>
+ 
+	<center><h4><a href="https://vignanam.page.link/MUfv" rel="external" target="_blank">Open In Vignanam Mobile App</a></h4></center>
+
+    <div data-role="content">
+        <h2 class="posttitle">Sree Lalita Sahasra Nama Stotram</h2>
+<span style="font-family:NotoSans; line-height:150%;">
+<p>Åm à¥¥ </p>
+<p>asya ÅrÄ« lalitÄ divya sahasranÄma stÅtra mahÄmantrasya, vaÅinyÄdi vÄgdÄvatÄ á¹á¹£ayaá¸¥, anuá¹£á¹­up Chandaá¸¥, ÅrÄ« lalitÄ parÄbhaá¹­á¹­ÄrikÄ mahÄ tripura sundarÄ« dÄvatÄ, aiá¹ bÄ«jaá¹, klÄ«á¹ Åaktiá¸¥, sauá¸¥ kÄ«lakaá¹, mama dharmÄrtha kÄma mÅká¹£a chaturvidha phalapuruá¹£Ärtha siddhyarthÄ lalitÄ tripurasundarÄ« parÄbhaá¹­á¹­ÄrikÄ sahasra nÄma japÄ viniyÅgaá¸¥</p>
+<p><b>karanyÄsaá¸¥</b><br />
+aiá¹ aá¹guá¹£á¹­ÄbhyÄá¹ namaá¸¥, klÄ«á¹ tarjanÄ«bhyÄá¹ namaá¸¥, sauá¸¥ madhyamÄbhyÄá¹ namaá¸¥, sauá¸¥ anÄmikÄbhyÄá¹ namaá¸¥, klÄ«á¹ kaniá¹£á¹­hikÄbhyÄá¹ namaá¸¥, aiá¹ karatala karapá¹á¹£á¹­hÄbhyÄá¹ namaá¸¥</p>
+<p><b>aá¹ganyÄsaá¸¥</b><br />
+aiá¹ há¹dayÄya namaá¸¥, klÄ«á¹ ÅirasÄ svÄhÄ, sauá¸¥ ÅikhÄyai vaá¹£aá¹­, sauá¸¥ kavachÄya huá¹, klÄ«á¹ nÄtratrayÄya vauá¹£aá¹­, aiá¹ astrÄyaphaá¹­, bhÅ«rbhuvassuvarÅmiti digbandhaá¸¥</p>
+<p><b>dhyÄnaá¹</b><br />
+aruá¹Äá¹ karuá¹Ä taraá¹gitÄká¹£Ä«á¹ dhá¹tapÄÅÄá¹kuÅa puá¹£pabÄá¹achÄpÄm à¥¤<br />
+aá¹imÄdibhi rÄvá¹tÄá¹ mayÅ«khaiá¸¥ ahamityÄva vibhÄvayÄ bhavÄnÄ«m à¥¥ 1 à¥¥</p>
+<p>dhyÄyÄt padmÄsanasthÄá¹ vikasitavadanÄá¹ padma patrÄyatÄká¹£Ä«á¹<br />
+hÄmÄbhÄá¹ pÄ«tavastrÄá¹ karakalita lasamaddhÄmapadmÄá¹ varÄá¹gÄ«m à¥¤<br />
+sarvÄlaá¹kÄrayuktÄá¹ sakalamabhayadÄá¹ bhaktanamrÄá¹ bhavÄnÄ«á¹<br />
+ÅrÄ« vidyÄá¹ ÅÄntamÅ«rtiá¹ sakala surasutÄá¹ sarvasampat-pradÄtrÄ«m à¥¥ 2 à¥¥</p>
+<p>sakuá¹kuma vilÄpanÄ maá¸»ikachumbi kastÅ«rikÄá¹<br />
+samanda hasitÄká¹£aá¹Äá¹ saÅarachÄpa pÄÅÄá¹kuÅÄm à¥¤<br />
+aÅÄá¹£a janamÅhinÄ« maruá¹amÄlya bhÅ«á¹£ÅjjvalÄá¹<br />
+japÄkusuma bhÄsurÄá¹ japavidhau smarÄ dambikÄm à¥¥ 3 à¥¥</p>
+<p>sindhÅ«rÄruá¹a vigrahÄá¹ triá¹ayanÄá¹ mÄá¹ikya mauá¸»isphura-<br />
+ttÄrÄnÄyaka ÅÄkharÄá¹ smitamukhÄ« mÄpÄ«na vaká¹£ÅruhÄm à¥¤<br />
+pÄá¹ibhyÄ malipÅ«rá¹a ratna chaá¹£akaá¹ raktÅtpalaá¹ bibhratÄ«á¹<br />
+saumyÄá¹ ratnaghaá¹­astha rakta charaá¹Äá¹ dhyÄyÄtparÄmambikÄm à¥¥ 4 à¥¥</p>
+<p>lamityÄdi paÃ±chapÅ«jÄá¹ vibhÄvayÄt</p>
+<p>laá¹ pá¹thivÄ« tattvÄtmikÄyai ÅrÄ« lalitÄdÄvyai gandhaá¹ parikalpayÄmi<br />
+haá¹ ÄkÄÅa tattvÄtmikÄyai ÅrÄ« lalitÄdÄvyai puá¹£paá¹ parikalpayÄmi<br />
+yaá¹ vÄyu tattvÄtmikÄyai ÅrÄ« lalitÄdÄvyai dhÅ«paá¹ parikalpayÄmi<br />
+raá¹ vahni tattvÄtmikÄyai ÅrÄ« lalitÄdÄvyai dÄ«paá¹ parikalpayÄmi<br />
+vaá¹ amá¹ta tattvÄtmikÄyai ÅrÄ« lalitÄdÄvyai amá¹ta naivÄdyaá¹ parikalpayÄmi<br />
+saá¹ sarva tattvÄtmikÄyai ÅrÄ« lalitÄdÄvyai tÄmbÅ«lÄdi sarvÅpachÄrÄn parikalpayÄmi</p>
+<p>gururbrahma gururviá¹£á¹uá¸¥ gururdÄvÅ mahÄÅvaraá¸¥ à¥¤<br />
+gurussÄká¹£Ät parabrahma tasmai ÅrÄ« guravÄ namaá¸¥ à¥¥</p>
+<p>hariá¸¥ Åá¹</p>
+<p>ÅrÄ« mÄtÄ, ÅrÄ« mahÄrÄjÃ±Ä«, ÅrÄ«mat-siá¹hÄsanÄÅvarÄ« à¥¤<br />
+chidagni kuá¹á¸asambhÅ«tÄ, dÄvakÄryasamudyatÄ à¥¥ 1 à¥¥<br />
+ <br />
+udyadbhÄnu sahasrÄbhÄ, chaturbÄhu samanvitÄ à¥¤<br />
+rÄgasvarÅ«pa pÄÅÄá¸hyÄ, krÅdhÄkÄrÄá¹kuÅÅjjvalÄ à¥¥ 2 à¥¥<br />
+ <br />
+manÅrÅ«pÄká¹£ukÅdaá¹á¸Ä, paÃ±chatanmÄtra sÄyakÄ à¥¤<br />
+nijÄruá¹a prabhÄpÅ«ra majjad-brahmÄá¹á¸amaá¹á¸alÄ à¥¥ 3 à¥¥<br />
+ <br />
+champakÄÅÅka punnÄga saugandhika lasatkachÄ<br />
+kuruvinda maá¹iÅrÄá¹Ä« kanatkÅá¹­Ä«ra maá¹á¸itÄ à¥¥ 4 à¥¥<br />
+ <br />
+aá¹£á¹­amÄ« chandra vibhrÄja daá¸»ikasthala ÅÅbhitÄ à¥¤<br />
+mukhachandra kaá¸»aá¹kÄbha má¹ganÄbhi viÅÄá¹£akÄ à¥¥ 5 à¥¥<br />
+ <br />
+vadanasmara mÄá¹galya gá¹hatÅraá¹a chillikÄ à¥¤<br />
+vaktralaká¹£mÄ« parÄ«vÄha chalanmÄ«nÄbha lÅchanÄ à¥¥ 6 à¥¥<br />
+ <br />
+navachampaka puá¹£pÄbha nÄsÄdaá¹á¸a virÄjitÄ à¥¤<br />
+tÄrÄkÄnti tiraskÄri nÄsÄbharaá¹a bhÄsurÄ à¥¥ 7 à¥¥<br />
+ <br />
+kadamba maÃ±jarÄ«kLâipta kará¹apÅ«ra manÅharÄ à¥¤<br />
+tÄá¹­aá¹ka yugaá¸»Ä«bhÅ«ta tapanÅá¸upa maá¹á¸alÄ à¥¥ 8 à¥¥<br />
+ <br />
+padmarÄga ÅilÄdarÅa paribhÄvi kapÅlabhÅ«á¸¥ à¥¤<br />
+navavidruma bimbaÅrÄ«á¸¥ nyakkÄri radanachChadÄ à¥¥ 9 à¥¥<br />
+ <br />
+Åuddha vidyÄá¹kurÄkÄra dvijapaá¹kti dvayÅjjvalÄ à¥¤<br />
+karpÅ«ravÄ«á¹­i kÄmÅda samÄkará¹£addigantarÄ à¥¥ 10 à¥¥<br />
+ <br />
+nijasallÄpa mÄdhurya vinirbhatsita kachChapÄ« à¥¤<br />
+mandasmita prabhÄpÅ«ra majjat-kÄmÄÅa mÄnasÄ à¥¥ 11 à¥¥<br />
+ <br />
+anÄkalita sÄdá¹Åya chubuka ÅrÄ« virÄjitÄ à¥¤<br />
+kÄmÄÅabaddha mÄá¹galya sÅ«traÅÅbhita kantharÄ à¥¥ 12 à¥¥<br />
+ <br />
+kanakÄá¹gada kÄyÅ«ra kamanÄ«ya bhujÄnvitÄ à¥¤<br />
+ratnagraivÄya chintÄka lÅlamuktÄ phalÄnvitÄ à¥¥ 13 à¥¥</p>
+<p>kÄmÄÅvara prÄmaratna maá¹i pratipaá¹astanÄ«à¥¤<br />
+nÄbhyÄlavÄla rÅmÄá¸»i latÄphala kuchadvayÄ« à¥¥ 14 à¥¥<br />
+ <br />
+laká¹£yarÅmalatÄ dhÄratÄ samunnÄya madhyamÄ à¥¤<br />
+stanabhÄra daá¸»an-madhya paá¹­á¹­abandha vaá¸»itrayÄ à¥¥ 15 à¥¥<br />
+ <br />
+aruá¹Äruá¹a kausumbha vastra bhÄsvat-kaá¹­Ä«taá¹­Ä« à¥¤<br />
+ratnakiá¹kiá¹i kÄramya raÅanÄdÄma bhÅ«á¹£itÄ à¥¥ 16 à¥¥<br />
+ <br />
+kÄmÄÅa jÃ±Äta saubhÄgya mÄrdavÅru dvayÄnvitÄ à¥¤<br />
+mÄá¹ikya makuá¹­ÄkÄra jÄnudvaya virÄjitÄ à¥¥ 17 à¥¥<br />
+ <br />
+indragÅpa pariká¹£ipta smara tÅ«á¹Äbha jaá¹ghikÄ à¥¤<br />
+gÅ«á¸hagulbhÄ kÅ«rmapá¹á¹£á¹­ha jayiá¹£á¹u prapadÄnvitÄ à¥¥ 18 à¥¥<br />
+ <br />
+nakhadÄ«dhiti saÃ±Channa namajjana tamÅguá¹Ä à¥¤<br />
+padadvaya prabhÄjÄla parÄká¹ta sarÅruhÄ à¥¥ 19 à¥¥<br />
+ <br />
+ÅiÃ±jÄna maá¹imaÃ±jÄ«ra maá¹á¸ita ÅrÄ« padÄmbujÄ à¥¤<br />
+marÄá¸»Ä« mandagamanÄ, mahÄlÄvaá¹ya ÅÄvadhiá¸¥ à¥¥ 20 à¥¥<br />
+ <br />
+sarvÄruá¹Ä'navadyÄá¹gÄ« sarvÄbharaá¹a bhÅ«á¹£itÄ à¥¤<br />
+ÅivakÄmÄÅvarÄá¹kasthÄ, ÅivÄ, svÄdhÄ«na vallabhÄ à¥¥ 21 à¥¥<br />
+ <br />
+sumÄru madhyaÅá¹á¹gasthÄ, ÅrÄ«mannagara nÄyikÄ à¥¤<br />
+chintÄmaá¹i gá¹hÄntasthÄ, paÃ±chabrahmÄsanasthitÄ à¥¥ 22 à¥¥<br />
+ <br />
+mahÄpadmÄá¹­avÄ« saá¹sthÄ, kadamba vanavÄsinÄ« à¥¤<br />
+sudhÄsÄgara madhyasthÄ, kÄmÄká¹£Ä« kÄmadÄyinÄ« à¥¥ 23 à¥¥<br />
+ <br />
+dÄvará¹£i gaá¹asaá¹ghÄta stÅ«yamÄnÄtma vaibhavÄ à¥¤<br />
+bhaá¹á¸Äsura vadhÅdyukta ÅaktisÄnÄ samanvitÄ à¥¥ 24 à¥¥<br />
+ <br />
+sampatkarÄ« samÄrÅ«á¸ha sindhura vrajasÄvitÄ à¥¤<br />
+aÅvÄrÅ«á¸hÄdhiá¹£á¹­hitÄÅva kÅá¹­ikÅá¹­i bhirÄvá¹tÄ à¥¥ 25 à¥¥<br />
+ <br />
+chakrarÄja rathÄrÅ«á¸ha sarvÄyudha pariá¹£ká¹tÄ à¥¤<br />
+gÄyachakra rathÄrÅ«á¸ha mantriá¹Ä« parisÄvitÄ à¥¥ 26 à¥¥</p>
+<p>kirichakra rathÄrÅ«á¸ha daá¹á¸anÄthÄ puraská¹tÄ à¥¤<br />
+jvÄlÄmÄlini kÄká¹£ipta vahniprÄkÄra madhyagÄ à¥¥ 27 à¥¥<br />
+ <br />
+bhaá¹á¸asainya vadhÅdyukta Åakti vikramahará¹£itÄ à¥¤<br />
+nityÄ parÄkramÄá¹­Åpa nirÄ«ká¹£aá¹a samutsukÄ à¥¥ 28 à¥¥<br />
+ <br />
+bhaá¹á¸aputra vadhÅdyukta bÄlÄvikrama nanditÄ à¥¤<br />
+mantriá¹yambÄ virachita viá¹£aá¹ga vadhatÅá¹£itÄ à¥¥ 29 à¥¥<br />
+ <br />
+viÅukra prÄá¹aharaá¹a vÄrÄhÄ« vÄ«ryananditÄ à¥¤<br />
+kÄmÄÅvara mukhÄlÅka kalpita ÅrÄ« gaá¹ÄÅvarÄ à¥¥ 30 à¥¥<br />
+ <br />
+mahÄgaá¹ÄÅa nirbhinna vighnayantra prahará¹£itÄ à¥¤<br />
+bhaá¹á¸ÄsurÄndra nirmukta Åastra pratyastra vará¹£iá¹Ä« à¥¥ 31 à¥¥<br />
+ <br />
+karÄá¹guá¸»i nakhÅtpanna nÄrÄyaá¹a daÅÄká¹tiá¸¥ à¥¤<br />
+mahÄpÄÅupatÄstrÄgni nirdagdhÄsura sainikÄ à¥¥ 32 à¥¥<br />
+ <br />
+kÄmÄÅvarÄstra nirdagdha sabhaá¹á¸Äsura ÅÅ«nyakÄ à¥¤<br />
+brahmÅpÄndra mahÄndrÄdi dÄvasaá¹stuta vaibhavÄ à¥¥ 33 à¥¥<br />
+ <br />
+haranÄtrÄgni sandagdha kÄma saÃ±jÄ«vanauá¹£adhiá¸¥ à¥¤<br />
+ÅrÄ«madvÄgbhava kÅ«á¹­aika svarÅ«pa mukhapaá¹kajÄ à¥¥ 34 à¥¥<br />
+ <br />
+kaá¹á¹­hÄdhaá¸¥ kaá¹­iparyanta madhyakÅ«á¹­a svarÅ«piá¹Ä« à¥¤<br />
+ÅaktikÅ«á¹­aika tÄpanna kaá¹­yathÅbhÄga dhÄriá¹Ä« à¥¥ 35 à¥¥<br />
+ <br />
+mÅ«lamantrÄtmikÄ, mÅ«lakÅ«á¹­a traya kaá¸»ÄbarÄ à¥¤<br />
+kuá¸»Ämá¹taika rasikÄ, kuá¸»asaá¹kÄta pÄlinÄ« à¥¥ 36 à¥¥<br />
+ <br />
+kuá¸»Äá¹ganÄ, kuá¸»Äntaá¸¥sthÄ, kauá¸»inÄ«, kuá¸»ayÅginÄ« à¥¤<br />
+akuá¸»Ä, samayÄntaá¸¥sthÄ, samayÄchÄra tatparÄ à¥¥ 37 à¥¥<br />
+ <br />
+mÅ«lÄdhÄraika nilayÄ, brahmagranthi vibhÄdinÄ« à¥¤<br />
+maá¹ipÅ«rÄnta ruditÄ, viá¹£á¹ugranthi vibhÄdinÄ« à¥¥ 38 à¥¥<br />
+ <br />
+ÄjÃ±Ä chakrÄntarÄá¸»asthÄ, rudragranthi vibhÄdinÄ« à¥¤<br />
+sahasrÄrÄmbujÄ rÅ«á¸hÄ, sudhÄsÄrÄbhi vará¹£iá¹Ä« à¥¥ 39 à¥¥</p>
+<p>taá¹­illatÄ samaruchiá¸¥, á¹£aá¹­-chakrÅpari saá¹sthitÄ à¥¤<br />
+mahÄÅaktiá¸¥, kuá¹á¸alinÄ«, bisatantu tanÄ«yasÄ« à¥¥ 40 à¥¥<br />
+ <br />
+bhavÄnÄ«, bhÄvanÄgamyÄ, bhavÄraá¹ya kuá¹­hÄrikÄ à¥¤<br />
+bhadrapriyÄ, bhadramÅ«rti, rbhaktasaubhÄgya dÄyinÄ« à¥¥ 41 à¥¥<br />
+ <br />
+bhaktipriyÄ, bhaktigamyÄ, bhaktivaÅyÄ, bhayÄpahÄ à¥¤<br />
+ÅÄmbhavÄ«, ÅÄradÄrÄdhyÄ, ÅarvÄá¹Ä«, ÅarmadÄyinÄ« à¥¥ 42 à¥¥<br />
+ <br />
+ÅÄá¹karÄ«, ÅrÄ«karÄ«, sÄdhvÄ«, ÅarachchandranibhÄnanÄ à¥¤<br />
+ÅÄtÅdarÄ«, ÅÄntimatÄ«, nirÄdhÄrÄ, niraÃ±janÄ à¥¥ 43 à¥¥<br />
+ <br />
+nirlÄpÄ, nirmalÄ, nityÄ, nirÄkÄrÄ, nirÄkulÄ à¥¤<br />
+nirguá¹Ä, niá¹£kaá¸»Ä, ÅÄntÄ, niá¹£kÄmÄ, nirupaplavÄ à¥¥ 44 à¥¥<br />
+ <br />
+nityamuktÄ, nirvikÄrÄ, niá¹£prapaÃ±chÄ, nirÄÅrayÄ à¥¤<br />
+nityaÅuddhÄ, nityabuddhÄ, niravadyÄ, nirantarÄ à¥¥ 45 à¥¥<br />
+ <br />
+niá¹£kÄraá¹Ä, niá¹£kaá¸»aá¹kÄ, nirupÄdhi, rnirÄ«ÅvarÄ à¥¤<br />
+nÄ«rÄgÄ, rÄgamathanÄ«, nirmadÄ, madanÄÅinÄ« à¥¥ 46 à¥¥<br />
+ <br />
+niÅchintÄ, nirahaá¹kÄrÄ, nirmÅhÄ, mÅhanÄÅinÄ« à¥¤<br />
+nirmamÄ, mamatÄhantrÄ«, niá¹£pÄpÄ, pÄpanÄÅinÄ« à¥¥ 47 à¥¥<br />
+ <br />
+niá¹£krÅdhÄ, krÅdhaÅamanÄ«, nirlÅbhÄ, lÅbhanÄÅinÄ« à¥¤<br />
+niá¸¥saá¹ÅayÄ, saá¹ÅayaghnÄ«, nirbhavÄ, bhavanÄÅinÄ« à¥¥ 48 à¥¥<br />
+ <br />
+nirvikalpÄ, nirÄbÄdhÄ, nirbhÄdÄ, bhÄdanÄÅinÄ« à¥¤<br />
+nirnÄÅÄ, má¹tyumathanÄ«, niá¹£kriyÄ, niá¹£parigrahÄ à¥¥ 49 à¥¥<br />
+ <br />
+nistulÄ, nÄ«lachikurÄ, nirapÄyÄ, niratyayÄ à¥¤<br />
+durlabhÄ, durgamÄ, durgÄ, duá¸¥khahantrÄ«, sukhapradÄ à¥¥ 50 à¥¥<br />
+ <br />
+duá¹£á¹­adÅ«rÄ, durÄchÄra ÅamanÄ«, dÅá¹£avarjitÄ à¥¤<br />
+sarvajÃ±Ä, sÄndrakaruá¹Ä, samÄnÄdhikavarjitÄ à¥¥ 51 à¥¥<br />
+ <br />
+sarvaÅaktimayÄ«, sarvamaá¹gaá¸»Ä, sadgatipradÄ à¥¤<br />
+sarvÄÅvarÄ«, sarvamayÄ«, sarvamantra svarÅ«piá¹Ä« à¥¥ 52 à¥¥</p>
+<p>sarvayantrÄtmikÄ, sarvatantrarÅ«pÄ, manÅnmanÄ« à¥¤<br />
+mÄhÄÅvarÄ«, mahÄdÄvÄ«, mahÄlaká¹£mÄ«, rmá¹á¸apriyÄ à¥¥ 53 à¥¥<br />
+ <br />
+mahÄrÅ«pÄ, mahÄpÅ«jyÄ, mahÄpÄtaka nÄÅinÄ« à¥¤<br />
+mahÄmÄyÄ, mahÄsattvÄ, mahÄÅakti rmahÄratiá¸¥ à¥¥ 54 à¥¥<br />
+ <br />
+mahÄbhÅgÄ, mahaiÅvaryÄ, mahÄvÄ«ryÄ, mahÄbalÄ à¥¤<br />
+mahÄbuddhi, rmahÄsiddhi, rmahÄyÅgÄÅvarÄÅvarÄ« à¥¥ 55 à¥¥<br />
+ <br />
+mahÄtantrÄ, mahÄmantrÄ, mahÄyantrÄ, mahÄsanÄ à¥¤<br />
+mahÄyÄga kramÄrÄdhyÄ, mahÄbhairava pÅ«jitÄ à¥¥ 56 à¥¥<br />
+ <br />
+mahÄÅvara mahÄkalpa mahÄtÄá¹á¸ava sÄká¹£iá¹Ä« à¥¤<br />
+mahÄkÄmÄÅa mahiá¹£Ä«, mahÄtripura sundarÄ« à¥¥ 57 à¥¥<br />
+ <br />
+chatuá¸¥á¹£aá¹£á¹­yupachÄrÄá¸hyÄ, chatuá¹£á¹£aá¹£á¹­i kaá¸»ÄmayÄ« à¥¤<br />
+mahÄ chatuá¹£á¹£aá¹£á¹­i kÅá¹­i yÅginÄ« gaá¹asÄvitÄ à¥¥ 58 à¥¥<br />
+ <br />
+manuvidyÄ, chandravidyÄ, chandramaá¹á¸alamadhyagÄ à¥¤<br />
+chÄrurÅ«pÄ, chÄruhÄsÄ, chÄruchandra kaá¸»ÄdharÄ à¥¥ 59 à¥¥<br />
+ <br />
+charÄchara jagannÄthÄ, chakrarÄja nikÄtanÄ à¥¤<br />
+pÄrvatÄ«, padmanayanÄ, padmarÄga samaprabhÄ à¥¥ 60 à¥¥<br />
+ <br />
+paÃ±chaprÄtÄsanÄsÄ«nÄ, paÃ±chabrahma svarÅ«piá¹Ä« à¥¤<br />
+chinmayÄ«, paramÄnandÄ, vijÃ±Äna ghanarÅ«piá¹Ä« à¥¥ 61 à¥¥<br />
+ <br />
+dhyÄnadhyÄtá¹ dhyÄyarÅ«pÄ, dharmÄdharma vivarjitÄ à¥¤<br />
+viÅvarÅ«pÄ, jÄgariá¹Ä«, svapantÄ«, taijasÄtmikÄ à¥¥ 62 à¥¥<br />
+ <br />
+suptÄ, prÄjÃ±ÄtmikÄ, turyÄ, sarvÄvasthÄ vivarjitÄ à¥¤<br />
+sá¹á¹£á¹­ikartrÄ«, brahmarÅ«pÄ, gÅptrÄ«, gÅvindarÅ«piá¹Ä« à¥¥ 63 à¥¥<br />
+ <br />
+saá¹hÄriá¹Ä«, rudrarÅ«pÄ, tirÅdhÄnakarÄ«ÅvarÄ« à¥¤<br />
+sadÄÅivÄnugrahadÄ, paÃ±chaká¹tya parÄyaá¹Ä à¥¥ 64 à¥¥<br />
+ <br />
+bhÄnumaá¹á¸ala madhyasthÄ, bhairavÄ«, bhagamÄlinÄ« à¥¤<br />
+padmÄsanÄ, bhagavatÄ«, padmanÄbha sahÅdarÄ« à¥¥ 65 à¥¥</p>
+<p>unmÄá¹£a nimiá¹£Åtpanna vipanna bhuvanÄvaá¸»iá¸¥ à¥¤<br />
+sahasraÅÄ«rá¹£avadanÄ, sahasrÄká¹£Ä«, sahasrapÄt à¥¥ 66 à¥¥<br />
+ <br />
+Äbrahma kÄ«á¹­ajananÄ«, vará¹ÄÅrama vidhÄyinÄ« à¥¤<br />
+nijÄjÃ±ÄrÅ«panigamÄ, puá¹yÄpuá¹ya phalapradÄ à¥¥ 67 à¥¥<br />
+ <br />
+Åruti sÄ«manta sindhÅ«rÄ«ká¹ta pÄdÄbjadhÅ«á¸»ikÄ à¥¤<br />
+sakalÄgama sandÅha Åuktisampuá¹­a mauktikÄ à¥¥ 68 à¥¥<br />
+ <br />
+puruá¹£ÄrthapradÄ, pÅ«rá¹Ä, bhÅginÄ«, bhuvanÄÅvarÄ« à¥¤<br />
+ambikÄ,'nÄdi nidhanÄ, haribrahmÄndra sÄvitÄ à¥¥ 69 à¥¥<br />
+ <br />
+nÄrÄyaá¹Ä«, nÄdarÅ«pÄ, nÄmarÅ«pa vivarjitÄ à¥¤<br />
+hrÄ«á¹kÄrÄ«, hrÄ«matÄ«, há¹dyÄ, hÄyÅpÄdÄya varjitÄ à¥¥ 70 à¥¥<br />
+ <br />
+rÄjarÄjÄrchitÄ, rÄjÃ±Ä«, ramyÄ, rÄjÄ«valÅchanÄ à¥¤<br />
+raÃ±janÄ«, ramaá¹Ä«, rasyÄ, raá¹atkiá¹kiá¹i mÄkhalÄ à¥¥ 71 à¥¥<br />
+ <br />
+ramÄ, rÄkÄnduvadanÄ, ratirÅ«pÄ, ratipriyÄ à¥¤<br />
+raká¹£ÄkarÄ«, rÄká¹£asaghnÄ«, rÄmÄ, ramaá¹alampaá¹­Ä à¥¥ 72 à¥¥<br />
+ <br />
+kÄmyÄ, kÄmakaá¸»ÄrÅ«pÄ, kadamba kusumapriyÄ à¥¤<br />
+kaá¸»yÄá¹Ä«, jagatÄ«kandÄ, karuá¹Ärasa sÄgarÄ à¥¥ 73 à¥¥<br />
+ <br />
+kaá¸»ÄvatÄ«, kaá¸»ÄlÄpÄ, kÄntÄ, kÄdambarÄ«priyÄ à¥¤<br />
+varadÄ, vÄmanayanÄ, vÄruá¹Ä«madavihvalÄ à¥¥ 74 à¥¥<br />
+ <br />
+viÅvÄdhikÄ, vÄdavÄdyÄ, vindhyÄchala nivÄsinÄ« à¥¤<br />
+vidhÄtrÄ«, vÄdajananÄ«, viá¹£á¹umÄyÄ, vilÄsinÄ« à¥¥ 75 à¥¥<br />
+ <br />
+ká¹£ÄtrasvarÅ«pÄ, ká¹£ÄtrÄÅÄ«, ká¹£Ätra ká¹£ÄtrajÃ±a pÄlinÄ« à¥¤<br />
+ká¹£ayavá¹ddhi vinirmuktÄ, ká¹£ÄtrapÄla samarchitÄ à¥¥ 76 à¥¥<br />
+ <br />
+vijayÄ, vimalÄ, vandyÄ, vandÄru janavatsalÄ à¥¤<br />
+vÄgvÄdinÄ«, vÄmakÄÅÄ«, vahnimaá¹á¸ala vÄsinÄ« à¥¥ 77 à¥¥<br />
+ <br />
+bhaktimat-kalpalatikÄ, paÅupÄÅa vimÅchanÄ« à¥¤<br />
+saá¹há¹tÄÅÄá¹£a pÄá¹£aá¹á¸Ä, sadÄchÄra pravartikÄ à¥¥ 78 à¥¥</p>
+<p>tÄpatrayÄgni santapta samÄhlÄdana chandrikÄ à¥¤<br />
+taruá¹Ä«, tÄpasÄrÄdhyÄ, tanumadhyÄ, tamÅ'pahÄ à¥¥ 79 à¥¥<br />
+ <br />
+chiti, statpadalaká¹£yÄrthÄ, chidÄka rasarÅ«piá¹Ä« à¥¤<br />
+svÄtmÄnandalavÄ«bhÅ«ta brahmÄdyÄnanda santatiá¸¥ à¥¥ 80 à¥¥<br />
+ <br />
+parÄ, pratyakchitÄ« rÅ«pÄ, paÅyantÄ«, paradÄvatÄ à¥¤<br />
+madhyamÄ, vaikharÄ«rÅ«pÄ, bhaktamÄnasa haá¹sikÄ à¥¥ 81 à¥¥<br />
+ <br />
+kÄmÄÅvara prÄá¹anÄá¸Ä«, ká¹tajÃ±Ä, kÄmapÅ«jitÄ à¥¤<br />
+Åá¹á¹gÄra rasasampÅ«rá¹Ä, jayÄ, jÄlandharasthitÄ à¥¥ 82 à¥¥<br />
+ <br />
+Åá¸yÄá¹a pÄ«á¹­hanilayÄ, bindumaá¹á¸ala vÄsinÄ« à¥¤<br />
+rahÅyÄga kramÄrÄdhyÄ, rahastarpaá¹a tarpitÄ à¥¥ 83 à¥¥<br />
+ <br />
+sadyaá¸¥ prasÄdinÄ«, viÅvasÄká¹£iá¹Ä«, sÄká¹£ivarjitÄ à¥¤<br />
+á¹£aá¸aá¹gadÄvatÄ yuktÄ, á¹£Äá¸guá¹ya paripÅ«ritÄ à¥¥ 84 à¥¥<br />
+ <br />
+nityaklinnÄ, nirupamÄ, nirvÄá¹a sukhadÄyinÄ« à¥¤<br />
+nityÄ, á¹£Åá¸aÅikÄrÅ«pÄ, ÅrÄ«kaá¹á¹­hÄrdha ÅarÄ«riá¹Ä« à¥¥ 85 à¥¥<br />
+ <br />
+prabhÄvatÄ«, prabhÄrÅ«pÄ, prasiddhÄ, paramÄÅvarÄ« à¥¤<br />
+mÅ«lapraká¹ti ravyaktÄ, vyaktÄ'vyakta svarÅ«piá¹Ä« à¥¥ 86 à¥¥<br />
+ <br />
+vyÄpinÄ«, vividhÄkÄrÄ, vidyÄ'vidyÄ svarÅ«piá¹Ä« à¥¤<br />
+mahÄkÄmÄÅa nayanÄ kumudÄhlÄda kaumudÄ« à¥¥ 87 à¥¥</p>
+<p>bhaktahÄrda tamÅbhÄda bhÄnumad-bhÄnusantatiá¸¥ à¥¤<br />
+ÅivadÅ«tÄ«, ÅivÄrÄdhyÄ, ÅivamÅ«rti, ÅÅivaá¹karÄ« à¥¥ 88 à¥¥<br />
+ <br />
+ÅivapriyÄ, ÅivaparÄ, Åiá¹£á¹­Äá¹£á¹­Ä, Åiá¹£á¹­apÅ«jitÄ à¥¤<br />
+apramÄyÄ, svaprakÄÅÄ, manÅvÄchÄma gÅcharÄ à¥¥ 89 à¥¥<br />
+ <br />
+chichChakti, ÅchÄtanÄrÅ«pÄ, jaá¸aÅakti, rjaá¸ÄtmikÄ à¥¤<br />
+gÄyatrÄ«, vyÄhá¹ti, ssandhyÄ, dvijabá¹nda niá¹£ÄvitÄ à¥¥ 90 à¥¥<br />
+ <br />
+tattvÄsanÄ, tattvamayÄ«, paÃ±chakÅÅÄntarasthitÄ à¥¤<br />
+nissÄ«mamahimÄ, nityayauvanÄ, madaÅÄlinÄ« à¥¥ 91 à¥¥</p>
+<p>madaghÅ«rá¹ita raktÄká¹£Ä«, madapÄá¹­ala gaá¹á¸abhÅ«á¸¥ à¥¤<br />
+chandana dravadigdhÄá¹gÄ«, chÄmpÄya kusuma priyÄ à¥¥ 92 à¥¥<br />
+ <br />
+kuÅalÄ, kÅmalÄkÄrÄ, kurukuá¸»á¸»Ä, kulÄÅvarÄ« à¥¤<br />
+kuá¸»akuá¹á¸ÄlayÄ, kauá¸»a mÄrgatatpara sÄvitÄ à¥¥ 93 à¥¥<br />
+ <br />
+kumÄra gaá¹anÄthÄmbÄ, tuá¹£á¹­iá¸¥, puá¹£á¹­i, rmati, rdhá¹tiá¸¥ à¥¤<br />
+ÅÄntiá¸¥, svastimatÄ«, kÄnti, rnandinÄ«, vighnanÄÅinÄ« à¥¥ 94 à¥¥<br />
+ <br />
+tÄjÅvatÄ«, trinayanÄ, lÅlÄká¹£Ä« kÄmarÅ«piá¹Ä« à¥¤<br />
+mÄlinÄ«, haá¹sinÄ«, mÄtÄ, malayÄchala vÄsinÄ« à¥¥ 95 à¥¥<br />
+ <br />
+sumukhÄ«, naá¸»inÄ«, subhrÅ«á¸¥, ÅÅbhanÄ, suranÄyikÄ à¥¤<br />
+kÄlakaá¹á¹­hÄ«, kÄntimatÄ«, ká¹£Åbhiá¹Ä«, sÅ«ká¹£marÅ«piá¹Ä« à¥¥ 96 à¥¥<br />
+ <br />
+vajrÄÅvarÄ«, vÄmadÄvÄ«, vayÅ'vasthÄ vivarjitÄ à¥¤<br />
+siddhÄÅvarÄ«, siddhavidyÄ, siddhamÄtÄ, yaÅasvinÄ« à¥¥ 97 à¥¥<br />
+ <br />
+viÅuddhi chakranilayÄ,''raktavará¹Ä, trilÅchanÄ à¥¤<br />
+khaá¹­vÄá¹gÄdi praharaá¹Ä, vadanaika samanvitÄ à¥¥ 98 à¥¥<br />
+ <br />
+pÄyasÄnnapriyÄ, tvakâsthÄ, paÅulÅka bhayaá¹karÄ« à¥¤<br />
+amá¹tÄdi mahÄÅakti saá¹vá¹tÄ, á¸ÄkinÄ«ÅvarÄ« à¥¥ 99 à¥¥<br />
+ <br />
+anÄhatÄbja nilayÄ, ÅyÄmÄbhÄ, vadanadvayÄ à¥¤<br />
+daá¹á¹£á¹­rÅjjvalÄ,'ká¹£amÄlÄdhidharÄ, rudhira saá¹sthitÄ à¥¥ 100 à¥¥<br />
+ <br />
+kÄá¸»arÄtryÄdi ÅaktyÅghavá¹tÄ, snigdhaudanapriyÄ à¥¤<br />
+mahÄvÄ«rÄndra varadÄ, rÄkiá¹yambÄ svarÅ«piá¹Ä« à¥¥ 101 à¥¥<br />
+ <br />
+maá¹ipÅ«rÄbja nilayÄ, vadanatraya saá¹yutÄ à¥¤<br />
+vajrÄdhikÄyudhÅpÄtÄ, á¸ÄmaryÄdibhi rÄvá¹tÄ à¥¥ 102 à¥¥<br />
+ <br />
+raktavará¹Ä, mÄá¹saniá¹£á¹­hÄ, guá¸Änna prÄ«tamÄnasÄ à¥¤<br />
+samasta bhaktasukhadÄ, lÄkinyambÄ svarÅ«piá¹Ä« à¥¥ 103 à¥¥<br />
+ <br />
+svÄdhiá¹£á¹­hÄnÄmbu jagatÄ, chaturvaktra manÅharÄ à¥¤<br />
+ÅÅ«lÄdyÄyudha sampannÄ, pÄ«tavará¹Ä,'tigarvitÄ à¥¥ 104 à¥¥</p>
+<p>mÄdÅniá¹£á¹­hÄ, madhuprÄ«tÄ, bandinyÄdi samanvitÄ à¥¤<br />
+dadhyannÄsakta há¹dayÄ, kÄkinÄ« rÅ«padhÄriá¹Ä« à¥¥ 105 à¥¥<br />
+ <br />
+mÅ«lÄ dhÄrÄmbujÄrÅ«á¸hÄ, paÃ±chavaktrÄ,'sthisaá¹sthitÄ à¥¤<br />
+aá¹kuÅÄdi praharaá¹Ä, varadÄdi niá¹£ÄvitÄ à¥¥ 106 à¥¥<br />
+ <br />
+mudgaudanÄsakta chittÄ, sÄkinyambÄsvarÅ«piá¹Ä« à¥¤<br />
+ÄjÃ±Ä chakrÄbjanilayÄ, Åuklavará¹Ä, á¹£aá¸ÄnanÄ à¥¥ 107 à¥¥<br />
+ <br />
+majjÄsaá¹sthÄ, haá¹savatÄ« mukhyaÅakti samanvitÄ à¥¤<br />
+haridrÄnnaika rasikÄ, hÄkinÄ« rÅ«padhÄriá¹Ä« à¥¥ 108 à¥¥<br />
+ <br />
+sahasradaá¸»a padmasthÄ, sarvavará¹Åpa ÅÅbhitÄ à¥¤<br />
+sarvÄyudhadharÄ, Åukla saá¹sthitÄ, sarvatÅmukhÄ« à¥¥ 109 à¥¥<br />
+ <br />
+sarvaudana prÄ«tachittÄ, yÄkinyambÄ svarÅ«piá¹Ä« à¥¤<br />
+svÄhÄ, svadhÄ,'mati, rmÄdhÄ, Årutiá¸¥, smá¹ti, ranuttamÄ à¥¥ 110 à¥¥<br />
+ <br />
+puá¹yakÄ«rtiá¸¥, puá¹yalabhyÄ, puá¹yaÅravaá¹a kÄ«rtanÄ à¥¤<br />
+pulÅmajÄrchitÄ, bandhamÅchanÄ«, bandhurÄlakÄ à¥¥ 111 à¥¥<br />
+ <br />
+vimarÅarÅ«piá¹Ä«, vidyÄ, viyadÄdi jagatprasÅ«á¸¥ à¥¤<br />
+sarvavyÄdhi praÅamanÄ«, sarvamá¹tyu nivÄriá¹Ä« à¥¥ 112 à¥¥<br />
+ <br />
+agragaá¹yÄ,'chintyarÅ«pÄ, kalikalmaá¹£a nÄÅinÄ« à¥¤<br />
+kÄtyÄyinÄ«, kÄlahantrÄ«, kamalÄká¹£a niá¹£ÄvitÄ à¥¥ 113 à¥¥<br />
+ <br />
+tÄmbÅ«la pÅ«rita mukhÄ«, dÄá¸imÄ« kusumaprabhÄ à¥¤<br />
+má¹gÄká¹£Ä«, mÅhinÄ«, mukhyÄ, má¹á¸ÄnÄ«, mitrarÅ«piá¹Ä« à¥¥ 114 à¥¥<br />
+ <br />
+nityatá¹ptÄ, bhaktanidhi, rniyantrÄ«, nikhilÄÅvarÄ« à¥¤<br />
+maitryÄdi vÄsanÄlabhyÄ, mahÄpraá¸»aya sÄká¹£iá¹Ä« à¥¥ 115 à¥¥<br />
+ <br />
+parÄÅaktiá¸¥, parÄniá¹£á¹­hÄ, prajÃ±Äna ghanarÅ«piá¹Ä« à¥¤<br />
+mÄdhvÄ«pÄnÄlasÄ, mattÄ, mÄtá¹kÄ vará¹a rÅ«piá¹Ä« à¥¥ 116 à¥¥<br />
+ <br />
+mahÄkailÄsa nilayÄ, má¹á¹Äla má¹dudÅrlatÄ à¥¤<br />
+mahanÄ«yÄ, dayÄmÅ«rtÄ«, rmahÄsÄmrÄjyaÅÄlinÄ« à¥¥ 117 à¥¥</p>
+<p>ÄtmavidyÄ, mahÄvidyÄ, ÅrÄ«vidyÄ, kÄmasÄvitÄ à¥¤<br />
+ÅrÄ«á¹£Åá¸aÅÄká¹£arÄ« vidyÄ, trikÅ«á¹­Ä, kÄmakÅá¹­ikÄ à¥¥ 118 à¥¥<br />
+ <br />
+kaá¹­Äká¹£akiá¹karÄ« bhÅ«ta kamalÄ kÅá¹­isÄvitÄ à¥¤<br />
+Åiraá¸¥sthitÄ, chandranibhÄ, phÄlasthÄndra dhanuá¸¥prabhÄ à¥¥ 119 à¥¥<br />
+ <br />
+há¹dayasthÄ, raviprakhyÄ, trikÅá¹Äntara dÄ«pikÄ à¥¤<br />
+dÄká¹£Äyaá¹Ä«, daityahantrÄ«, daká¹£ayajÃ±a vinÄÅinÄ« à¥¥ 120 à¥¥<br />
+ <br />
+darÄndÅá¸»ita dÄ«rghÄká¹£Ä«, darahÄsÅjjvalanmukhÄ« à¥¤<br />
+gurumÅ«rti, rguá¹anidhi, rgÅmÄtÄ, guhajanmabhÅ«á¸¥ à¥¥ 121 à¥¥<br />
+ <br />
+dÄvÄÅÄ«, daá¹á¸anÄ«tisthÄ, daharÄkÄÅa rÅ«piá¹Ä« à¥¤<br />
+pratipanmukhya rÄkÄnta tithimaá¹á¸ala pÅ«jitÄ à¥¥ 122 à¥¥<br />
+ <br />
+kaá¸»ÄtmikÄ, kaá¸»ÄnÄthÄ, kÄvyÄlÄpa vinÅdinÄ« à¥¤<br />
+sachÄmara ramÄvÄá¹Ä« savyadaká¹£iá¹a sÄvitÄ à¥¥ 123 à¥¥<br />
+ <br />
+ÄdiÅakti, ramÄyÄ,''tmÄ, paramÄ, pÄvanÄká¹tiá¸¥ à¥¤<br />
+anÄkakÅá¹­i brahmÄá¹á¸a jananÄ«, divyavigrahÄ à¥¥ 124 à¥¥<br />
+ <br />
+klÄ«á¹kÄrÄ«, kÄvalÄ, guhyÄ, kaivalya padadÄyinÄ« à¥¤<br />
+tripurÄ, trijagadvandyÄ, trimÅ«rti, stridaÅÄÅvarÄ« à¥¥ 125 à¥¥<br />
+ <br />
+tryaká¹£arÄ«, divyagandhÄá¸hyÄ, sindhÅ«ra tilakÄÃ±chitÄ à¥¤<br />
+umÄ, ÅailÄndratanayÄ, gaurÄ«, gandharva sÄvitÄ à¥¥ 126 à¥¥<br />
+ <br />
+viÅvagarbhÄ, svará¹agarbhÄ,'varadÄ vÄgadhÄ«ÅvarÄ« à¥¤<br />
+dhyÄnagamyÄ,'parichChÄdyÄ, jÃ±ÄnadÄ, jÃ±ÄnavigrahÄ à¥¥ 127 à¥¥<br />
+ <br />
+sarvavÄdÄnta saá¹vÄdyÄ, satyÄnanda svarÅ«piá¹Ä« à¥¤<br />
+lÅpÄmudrÄrchitÄ, lÄ«lÄkLâipta brahmÄá¹á¸amaá¹á¸alÄ à¥¥ 128 à¥¥<br />
+ <br />
+adá¹ÅyÄ, dá¹ÅyarahitÄ, vijÃ±ÄtrÄ«, vÄdyavarjitÄ à¥¤<br />
+yÅginÄ«, yÅgadÄ, yÅgyÄ, yÅgÄnandÄ, yugandharÄ à¥¥ 129 à¥¥<br />
+ <br />
+ichChÄÅakti jÃ±ÄnaÅakti kriyÄÅakti svarÅ«piá¹Ä« à¥¤<br />
+sarvÄdhÄrÄ, supratiá¹£á¹­hÄ, sadasad-rÅ«padhÄriá¹Ä« à¥¥ 130 à¥¥</p>
+<p>aá¹£á¹­amÅ«rti, rajÄjaitrÄ«, lÅkayÄtrÄ vidhÄyinÄ« à¥¤<br />
+ÄkÄkinÄ«, bhÅ«marÅ«pÄ, nirdvaitÄ, dvaitavarjitÄ à¥¥ 131 à¥¥<br />
+ <br />
+annadÄ, vasudÄ, vá¹ddhÄ, brahmÄtmaikya svarÅ«piá¹Ä« à¥¤<br />
+bá¹hatÄ«, brÄhmaá¹Ä«, brÄhmÄ«, brahmÄnandÄ, balipriyÄ à¥¥ 132 à¥¥<br />
+ <br />
+bhÄá¹£ÄrÅ«pÄ, bá¹hatsÄnÄ, bhÄvÄbhÄva vivarjitÄ à¥¤<br />
+sukhÄrÄdhyÄ, ÅubhakarÄ«, ÅÅbhanÄ sulabhÄgatiá¸¥ à¥¥ 133 à¥¥<br />
+ <br />
+rÄjarÄjÄÅvarÄ«, rÄjyadÄyinÄ«, rÄjyavallabhÄ à¥¤<br />
+rÄjat-ká¹pÄ, rÄjapÄ«á¹­ha nivÄÅita nijÄÅritÄá¸¥ à¥¥ 134 à¥¥<br />
+ <br />
+rÄjyalaká¹£mÄ«á¸¥, kÅÅanÄthÄ, chaturaá¹ga balÄÅvarÄ« à¥¤<br />
+sÄmrÄjyadÄyinÄ«, satyasandhÄ, sÄgaramÄkhalÄ à¥¥ 135 à¥¥<br />
+ <br />
+dÄ«ká¹£itÄ, daityaÅamanÄ«, sarvalÅka vaÅaá¹karÄ« à¥¤<br />
+sarvÄrthadÄtrÄ«, sÄvitrÄ«, sachchidÄnanda rÅ«piá¹Ä« à¥¥ 136 à¥¥<br />
+ <br />
+dÄÅakÄlÄ'parichChinnÄ, sarvagÄ, sarvamÅhinÄ« à¥¤<br />
+sarasvatÄ«, ÅÄstramayÄ«, guhÄmbÄ, guhyarÅ«piá¹Ä« à¥¥ 137 à¥¥<br />
+ <br />
+sarvÅpÄdhi vinirmuktÄ, sadÄÅiva pativratÄ à¥¤<br />
+sampradÄyÄÅvarÄ«, sÄdhvÄ«, gurumaá¹á¸ala rÅ«piá¹Ä« à¥¥ 138 à¥¥<br />
+ <br />
+kulÅttÄ«rá¹Ä, bhagÄrÄdhyÄ, mÄyÄ, madhumatÄ«, mahÄ« à¥¤<br />
+gaá¹ÄmbÄ, guhyakÄrÄdhyÄ, kÅmalÄá¹gÄ«, gurupriyÄ à¥¥ 139 à¥¥<br />
+ <br />
+svatantrÄ, sarvatantrÄÅÄ«, daká¹£iá¹ÄmÅ«rti rÅ«piá¹Ä« à¥¤<br />
+sanakÄdi samÄrÄdhyÄ, ÅivajÃ±Äna pradÄyinÄ« à¥¥ 140 à¥¥<br />
+ <br />
+chitkaá¸»Ä,'nandakalikÄ, prÄmarÅ«pÄ, priyaá¹karÄ« à¥¤<br />
+nÄmapÄrÄyaá¹a prÄ«tÄ, nandividyÄ, naá¹­ÄÅvarÄ« à¥¥ 141 à¥¥<br />
+ <br />
+mithyÄ jagadadhiá¹£á¹­hÄnÄ muktidÄ, muktirÅ«piá¹Ä« à¥¤<br />
+lÄsyapriyÄ, layakarÄ«, lajjÄ, rambhÄdi vanditÄ à¥¥ 142 à¥¥<br />
+ <br />
+bhavadÄva sudhÄvá¹á¹£á¹­iá¸¥, pÄpÄraá¹ya davÄnalÄ à¥¤<br />
+daurbhÄgyatÅ«la vÄtÅ«lÄ, jarÄdhvÄnta raviprabhÄ à¥¥ 143 à¥¥</p>
+<p>bhÄgyÄbdhichandrikÄ, bhaktachittakÄki ghanÄghanÄ à¥¤<br />
+rÅgaparvata dambhÅá¸»i, rmá¹tyudÄru kuá¹­hÄrikÄ à¥¥ 144 à¥¥<br />
+ <br />
+mahÄÅvarÄ«, mahÄkÄá¸»Ä«, mahÄgrÄsÄ, mahÄ'ÅanÄ à¥¤<br />
+apará¹Ä, chaá¹á¸ikÄ, chaá¹á¸amuá¹á¸Ä'sura niá¹£Å«dinÄ« à¥¥ 145 à¥¥<br />
+ <br />
+ká¹£arÄká¹£arÄtmikÄ, sarvalÅkÄÅÄ«, viÅvadhÄriá¹Ä« à¥¤<br />
+trivargadÄtrÄ«, subhagÄ, tryambakÄ, triguá¹ÄtmikÄ à¥¥ 146 à¥¥<br />
+ <br />
+svargÄpavargadÄ, ÅuddhÄ, japÄpuá¹£pa nibhÄká¹tiá¸¥ à¥¤<br />
+ÅjÅvatÄ«, dyutidharÄ, yajÃ±arÅ«pÄ, priyavratÄ à¥¥ 147 à¥¥<br />
+ <br />
+durÄrÄdhyÄ, durÄdará¹£Ä, pÄá¹­alÄ« kusumapriyÄ à¥¤<br />
+mahatÄ«, mÄrunilayÄ, mandÄra kusumapriyÄ à¥¥ 148 à¥¥<br />
+ <br />
+vÄ«rÄrÄdhyÄ, virÄá¸rÅ«pÄ, virajÄ, viÅvatÅmukhÄ« à¥¤<br />
+pratyagrÅ«pÄ, parÄkÄÅÄ, prÄá¹adÄ, prÄá¹arÅ«piá¹Ä« à¥¥ 149 à¥¥<br />
+ <br />
+mÄrtÄá¹á¸a bhairavÄrÄdhyÄ, mantriá¹Ä« nyastarÄjyadhÅ«á¸¥ à¥¤<br />
+tripurÄÅÄ«, jayatsÄnÄ, nistraiguá¹yÄ, parÄparÄ à¥¥ 150 à¥¥<br />
+ <br />
+satyajÃ±ÄnÄ'nandarÅ«pÄ, sÄmarasya parÄyaá¹Ä à¥¤<br />
+kapardinÄ«, kalÄmÄlÄ, kÄmadhuk,kÄmarÅ«piá¹Ä« à¥¥ 151 à¥¥<br />
+ <br />
+kaá¸»Änidhiá¸¥, kÄvyakaá¸»Ä, rasajÃ±Ä, rasaÅÄvadhiá¸¥ à¥¤<br />
+puá¹£á¹­Ä, purÄtanÄ, pÅ«jyÄ, puá¹£karÄ, puá¹£karÄká¹£aá¹Ä à¥¥ 152 à¥¥<br />
+ <br />
+paraÃ±jyÅtiá¸¥, parandhÄma, paramÄá¹uá¸¥, parÄtparÄ à¥¤<br />
+pÄÅahastÄ, pÄÅahantrÄ«, paramantra vibhÄdinÄ« à¥¥ 153 à¥¥<br />
+ <br />
+mÅ«rtÄ,'mÅ«rtÄ,'nityatá¹ptÄ, muni mÄnasa haá¹sikÄ à¥¤<br />
+satyavratÄ, satyarÅ«pÄ, sarvÄntaryÄminÄ«, satÄ« à¥¥ 154 à¥¥<br />
+ <br />
+brahmÄá¹Ä«, brahmajananÄ«, bahurÅ«pÄ, budhÄrchitÄ à¥¤<br />
+prasavitrÄ«, prachaá¹á¸Ä'jÃ±Ä, pratiá¹£á¹­hÄ, prakaá¹­Äká¹tiá¸¥ à¥¥ 155 à¥¥<br />
+ <br />
+prÄá¹ÄÅvarÄ«, prÄá¹adÄtrÄ«, paÃ±chÄÅat-pÄ«á¹­harÅ«piá¹Ä« à¥¤<br />
+viÅá¹á¹khalÄ, viviktasthÄ, vÄ«ramÄtÄ, viyatprasÅ«á¸¥ à¥¥ 156 à¥¥</p>
+<p>mukundÄ, mukti nilayÄ, mÅ«lavigraha rÅ«piá¹Ä« à¥¤<br />
+bhÄvajÃ±Ä, bhavarÅgaghnÄ« bhavachakra pravartinÄ« à¥¥ 157 à¥¥<br />
+ <br />
+ChandassÄrÄ, ÅÄstrasÄrÄ, mantrasÄrÄ, talÅdarÄ« à¥¤<br />
+udÄrakÄ«rti, ruddÄmavaibhavÄ, vará¹arÅ«piá¹Ä« à¥¥ 158 à¥¥<br />
+ <br />
+janmamá¹tyu jarÄtapta jana viÅrÄnti dÄyinÄ« à¥¤<br />
+sarvÅpaniá¹£a dudghuá¹£á¹­Ä, ÅÄntyatÄ«ta kaá¸»ÄtmikÄ à¥¥ 159 à¥¥<br />
+ <br />
+gambhÄ«rÄ, gaganÄntaá¸¥sthÄ, garvitÄ, gÄnalÅlupÄ à¥¤<br />
+kalpanÄrahitÄ, kÄá¹£á¹­hÄ, kÄntÄ, kÄntÄrdha vigrahÄ à¥¥ 160 à¥¥<br />
+ <br />
+kÄryakÄraá¹a nirmuktÄ, kÄmakÄá¸»i taraá¹gitÄ à¥¤<br />
+kanat-kanakatÄá¹­aá¹kÄ, lÄ«lÄvigraha dhÄriá¹Ä« à¥¥ 161 à¥¥<br />
+ <br />
+ajÄká¹£aya vinirmuktÄ, mugdhÄ ká¹£ipraprasÄdinÄ« à¥¤<br />
+antarmukha samÄrÄdhyÄ, bahirmukha sudurlabhÄ à¥¥ 162 à¥¥<br />
+ <br />
+trayÄ«, trivarga nilayÄ, tristhÄ, tripuramÄlinÄ« à¥¤<br />
+nirÄmayÄ, nirÄlambÄ, svÄtmÄrÄmÄ, sudhÄsá¹tiá¸¥ à¥¥ 163 à¥¥<br />
+ <br />
+saá¹sÄrapaá¹ka nirmagna samuddharaá¹a paá¹á¸itÄ à¥¤<br />
+yajÃ±apriyÄ, yajÃ±akartrÄ«, yajamÄna svarÅ«piá¹Ä« à¥¥ 164 à¥¥<br />
+ <br />
+dharmÄdhÄrÄ, dhanÄdhyaká¹£Ä, dhanadhÄnya vivardhinÄ« à¥¤<br />
+viprapriyÄ, viprarÅ«pÄ, viÅvabhramaá¹a kÄriá¹Ä« à¥¥ 165 à¥¥<br />
+ <br />
+viÅvagrÄsÄ, vidrumÄbhÄ, vaiá¹£á¹avÄ«, viá¹£á¹urÅ«piá¹Ä« à¥¤<br />
+ayÅni, ryÅninilayÄ, kÅ«á¹­asthÄ, kularÅ«piá¹Ä« à¥¥ 166 à¥¥<br />
+ <br />
+vÄ«ragÅá¹£á¹­hÄ«priyÄ, vÄ«rÄ, naiá¹£karmyÄ, nÄdarÅ«piá¹Ä« à¥¤<br />
+vijÃ±Äna kalanÄ, kalyÄ vidagdhÄ, baindavÄsanÄ à¥¥ 167 à¥¥<br />
+ <br />
+tattvÄdhikÄ, tattvamayÄ«, tattvamartha svarÅ«piá¹Ä« à¥¤<br />
+sÄmagÄnapriyÄ, saumyÄ, sadÄÅiva kuá¹­umbinÄ« à¥¥ 168 à¥¥<br />
+ <br />
+savyÄpasavya mÄrgasthÄ, sarvÄpadvi nivÄriá¹Ä« à¥¤<br />
+svasthÄ, svabhÄvamadhurÄ, dhÄ«rÄ, dhÄ«ra samarchitÄ à¥¥ 169 à¥¥</p>
+<p>chaitanyÄrghya samÄrÄdhyÄ, chaitanya kusumapriyÄ à¥¤<br />
+sadÅditÄ, sadÄtuá¹£á¹­Ä, taruá¹Äditya pÄá¹­alÄ à¥¥ 170 à¥¥<br />
+ <br />
+daká¹£iá¹Ä, daká¹£iá¹ÄrÄdhyÄ, darasmÄra mukhÄmbujÄ à¥¤<br />
+kauá¸»inÄ« kÄvalÄ,'narghyÄ kaivalya padadÄyinÄ« à¥¥ 171 à¥¥<br />
+ <br />
+stÅtrapriyÄ, stutimatÄ«, Årutisaá¹stuta vaibhavÄ à¥¤<br />
+manasvinÄ«, mÄnavatÄ«, mahÄÅÄ«, maá¹gaá¸»Äká¹tiá¸¥ à¥¥ 172 à¥¥<br />
+ <br />
+viÅvamÄtÄ, jagaddhÄtrÄ«, viÅÄlÄká¹£Ä«, virÄgiá¹Ä«à¥¤<br />
+pragalbhÄ, paramÅdÄrÄ, parÄmÅdÄ, manÅmayÄ« à¥¥ 173 à¥¥<br />
+ <br />
+vyÅmakÄÅÄ«, vimÄnasthÄ, vajriá¹Ä«, vÄmakÄÅvarÄ« à¥¤<br />
+paÃ±chayajÃ±apriyÄ, paÃ±chaprÄta maÃ±chÄdhiÅÄyinÄ« à¥¥ 174 à¥¥<br />
+ <br />
+paÃ±chamÄ«, paÃ±chabhÅ«tÄÅÄ«, paÃ±cha saá¹khyÅpachÄriá¹Ä« à¥¤<br />
+ÅÄÅvatÄ«, ÅÄÅvataiÅvaryÄ, ÅarmadÄ, ÅambhumÅhinÄ« à¥¥ 175 à¥¥<br />
+ <br />
+dharÄ, dharasutÄ, dhanyÄ, dharmiá¹Ä«, dharmavardhinÄ« à¥¤<br />
+lÅkÄtÄ«tÄ, guá¹ÄtÄ«tÄ, sarvÄtÄ«tÄ, ÅamÄtmikÄ à¥¥ 176 à¥¥<br />
+ <br />
+bandhÅ«ka kusuma prakhyÄ, bÄlÄ, lÄ«lÄvinÅdinÄ« à¥¤<br />
+sumaá¹gaá¸»Ä«, sukhakarÄ«, suvÄá¹£Äá¸yÄ, suvÄsinÄ« à¥¥ 177 à¥¥<br />
+ <br />
+suvÄsinyarchanaprÄ«tÄ, ÅÅbhanÄ, Åuddha mÄnasÄ à¥¤<br />
+bindu tarpaá¹a santuá¹£á¹­Ä, pÅ«rvajÄ, tripurÄmbikÄ à¥¥ 178 à¥¥<br />
+ <br />
+daÅamudrÄ samÄrÄdhyÄ, tripurÄ ÅrÄ«vaÅaá¹karÄ« à¥¤<br />
+jÃ±ÄnamudrÄ, jÃ±ÄnagamyÄ, jÃ±ÄnajÃ±Äya svarÅ«piá¹Ä« à¥¥ 179 à¥¥<br />
+ <br />
+yÅnimudrÄ, trikhaá¹á¸ÄÅÄ«, triguá¹ÄmbÄ, trikÅá¹agÄ à¥¤<br />
+anaghÄdbhuta chÄritrÄ, vÄÃ±ChitÄrtha pradÄyinÄ« à¥¥ 180 à¥¥<br />
+ <br />
+abhyÄsÄti ÅayajÃ±ÄtÄ, á¹£aá¸adhvÄtÄ«ta rÅ«piá¹Ä« à¥¤<br />
+avyÄja karuá¹ÄmÅ«rti, rajÃ±ÄnadhvÄnta dÄ«pikÄ à¥¥ 181 à¥¥<br />
+ <br />
+ÄbÄlagÅpa viditÄ, sarvÄnullaá¹ghya ÅÄsanÄ à¥¤<br />
+ÅrÄ« chakrarÄjanilayÄ, ÅrÄ«mattripura sundarÄ« à¥¥ 182 à¥¥</p>
+<p>ÅrÄ« ÅivÄ, ÅivaÅaktyaikya rÅ«piá¹Ä«, lalitÄmbikÄ à¥¤<br />
+Ävaá¹ ÅrÄ«lalitÄdÄvyÄ nÄmnÄá¹ sÄhasrakaá¹ jaguá¸¥ à¥¥ 183 à¥¥<br />
+ <br />
+à¥¥ iti ÅrÄ« brahmÄá¹á¸apurÄá¹Ä, uttarakhaá¹á¸Ä, ÅrÄ« hayagrÄ«vÄgastya saá¹vÄdÄ,  ÅrÄ«lalitÄrahasyanÄma ÅrÄ« lalitÄ rahasyanÄma sÄhasrastÅtra kathanaá¹ nÄma dvitÄ«yÅ'dhyÄyaá¸¥ à¥¥</p>
+<p>sindhÅ«rÄruá¹a vigrahÄá¹ triá¹ayanÄá¹ mÄá¹ikya mauá¸»isphura-<br />
+ttÄrÄnÄyaka ÅÄkharÄá¹ smitamukhÄ« mÄpÄ«na vaká¹£ÅruhÄm à¥¤<br />
+pÄá¹ibhyÄ malipÅ«rá¹a ratna chaá¹£akaá¹ raktÅtpalaá¹ bibhratÄ«á¹<br />
+saumyÄá¹ ratnaghaá¹­astha rakta charaá¹Äá¹ dhyÄyÄtparÄmambikÄm à¥¥</p>
+<p></p></span>	</div>
+	
+	<!-- <footer class="deepLinkFooter">
+		<a class="deepLinkRef" href="https://vignanam.page.link/MUfv" target="_blank">Open In Vignanam Mobile App</a>
+	</footer> -->
+
+    <div data-role="footer" style="background: linear-gradient(to bottom, #eb540d 37.5%, #ffffff 0%);">
+		<center>
+			<img src="../../images/logo/mobile_header_logo/VVHeader-english.jpg" alt="Vaidika Vignanam" width="400" />
+		</center>
+        <!-- <h4><a href="https://vignanam.page.link/MUfv" rel="external" target="_blank">Open In Vignanam Mobile App</a></h4> -->
+    </div>
+
+    <!-- <div data-role="footer2" data-position="fixed">
+        <h4><a href="https://vignanam.page.link/MUfv" rel="external" target="_blank">Open In Vignanam Mobile App</a></h4>
+    </div> -->
+ 
+</div>
+
+  
+</body>
+</html>

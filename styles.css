@@ -1,0 +1,238 @@
+:root {
+  --bg: #f4f6f8;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: #ffffff;
+  --text: #111215;
+  --muted: #5d6570;
+  --accent: #0a84ff;
+  --accent-soft: rgba(10, 132, 255, 0.12);
+  --border: rgba(17, 18, 21, 0.08);
+  --shadow: 0 20px 48px rgba(12, 22, 40, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Pro Display", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 15% 10%, #ffffff 0%, #f4f6f8 42%, #e9edf3 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.ambient-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40rem 40rem at 12% 14%, rgba(255, 216, 183, 0.35), transparent 65%),
+    radial-gradient(44rem 44rem at 85% -5%, rgba(185, 217, 255, 0.4), transparent 62%);
+  z-index: -1;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-end;
+  padding: 2rem 2.4rem 1.2rem;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.35rem 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.9rem, 2.2vw, 2.8rem);
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 290px) 1fr;
+  gap: 1rem;
+  padding: 0 2rem 2rem;
+  height: calc(100vh - 8.5rem);
+}
+
+.sidebar,
+.content {
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.sidebar {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.stotram-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stotram-btn {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--text);
+  padding: 0.75rem 0.8rem;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.stotram-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.stotram-btn.active {
+  background: var(--accent-soft);
+  color: #0555a7;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content-head {
+  padding: 1.3rem 1.3rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.58));
+}
+
+.content-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.content-head p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.verse-list {
+  overflow-y: auto;
+  padding: 1.1rem;
+  display: grid;
+  gap: 0.85rem;
+  scroll-behavior: smooth;
+}
+
+.verse-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 1rem;
+  animation: rise 340ms ease both;
+}
+
+.verse-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.verse-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.label {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.sanskrit {
+  margin: 0;
+  font-family: "Noto Serif Devanagari", serif;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.translation,
+.meaning {
+  margin: 0;
+  line-height: 1.65;
+  color: #242931;
+}
+
+.meaning-wrap {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed rgba(17, 18, 21, 0.16);
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: calc(100vh - 8.5rem);
+  }
+
+  .sidebar {
+    max-height: 210px;
+  }
+
+  .content {
+    min-height: 72vh;
+  }
+
+  .verse-grid {
+    grid-template-columns: 1fr;
+  }
+}

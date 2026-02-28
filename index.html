@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JnanaVeda: Vedas as the Ultimate Source of Knowledge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;700&family=Playfair+Display:wght@500;600;700&family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true"></div>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Vedas as the Ultimate Source of Knowledge</p>
+      <h1>JnanaVeda</h1>
+    </div>
+    <p class="subtitle">Sri Rudram and Sri Lalitha Sahasranamam with Telugu, translation, and meaning.</p>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Stotram list">
+      <h2>Stotram List</h2>
+      <nav id="stotram-nav" class="stotram-nav"></nav>
+    </aside>
+
+    <section class="content" aria-live="polite">
+      <div class="content-head">
+        <h2 id="content-title"></h2>
+        <p id="content-meta"></p>
+      </div>
+      <div id="verse-list" class="verse-list"></div>
+    </section>
+  </main>
+
+  <template id="verse-template">
+    <article class="verse-card">
+      <p class="verse-meta"></p>
+      <div class="verse-grid">
+        <div>
+          <p class="label">Sanskrit</p>
+          <p class="sanskrit"></p>
+        </div>
+        <div>
+          <p class="label">English Translation</p>
+          <p class="translation"></p>
+        </div>
+      </div>
+      <div class="meaning-wrap">
+        <p class="label">Meaning</p>
+        <p class="meaning"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
