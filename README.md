@@ -10,11 +10,13 @@ JnanaVeda is a static web app that presents sacred stotra content in a structure
 - Telugu source preserved from user-provided text files
 - Parsed into sub-verse line entries under anuvaka structure
 - Each entry includes contextual English translation and meaning
+- English fields are meaning-oriented explanations for each specific line (not Telugu text echoes)
 
 2. Sri Lalitha Sahasranamam
 - Telugu source preserved from user-provided text file
 - Parsed into 183 main verse blocks
 - Each verse includes English translation and meaning
+- English translation/meaning are semantic summaries of the divine names in each verse
 
 ## UI Summary
 
